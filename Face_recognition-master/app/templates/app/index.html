@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1 class="mainHeading otto">Attendance System <br> <span>using face recognition</span></h1>
+<div class="container mainDiv">
+	<div class="container">
+		<div class="option">		
+			<a class="btn btn-primary"  href="{% url 'identify' %}" style="font-size: 19px; margin-bottom: 10px;">Identify Faces</a>
+			<span>Identify registered faces</span>
+		</div>
+		<div class="option">
+			<a class="btn btn-primary"  href="{% url 'detected' %}" style="font-size: 18px; margin-bottom: 10px;">Detected Faces</a>
+			<span>show details of detected faces</span>
+		</div>
+		<div class="option">
+			<a class="btn btn-primary" href="{% url 'add_emp' %}" style="font-size: 19px; margin-bottom: 10px;">Add Student</a>
+			<span>Add the data of new registered student</span>
+		</div>
+		<div class="option">
+			<a class="btn btn-primary"  href="{% url 'add_photos' %}" style="font-size: 20px; margin-bottom: 10px;">Add photos</a>
+			<span>Add a photo of new registered student</span>
+		</div>
+		<div class="option">
+			<a class="btn btn-primary"  href="{% url 'train_model' %}" style="font-size: 20px; margin-bottom: 10px;">Train model</a>
+			<span>Trained the image</span>
+		</div>
+	</div>
+</div>
+{% endblock %}
